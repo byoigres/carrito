@@ -6,7 +6,7 @@ class Home
 {
     public function __construct()
     {
-        echo __METHOD__;
+        
     }
 
     public function homePage()

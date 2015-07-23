@@ -21,6 +21,6 @@ class Yelu
 
         $router = new Router();
 
-        $router->start($this->config['routes']);
+        $router->start($this->config['routes'], $this->config['namespaces']['controller']);
     }
 }
