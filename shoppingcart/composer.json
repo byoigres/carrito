@@ -1,0 +1,17 @@
+{
+    "name": "coppel/shoppingcart",
+    "description": "Tienda en linea para la venta de artículos",
+    "authors": [
+        {
+            "name": "Sergio Flores",
+            "email": "byoigres@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Coppel\\Yelu\\": "../yelu/src/",
+            "Coppel\\Controllers\\": "src/controllers/"
+        }
+    }
+}
