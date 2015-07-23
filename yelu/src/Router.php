@@ -13,4 +13,9 @@ class Router
         $this->path = filter_input(INPUT_SERVER, 'REQUEST_URI');
         $this->method = filter_input(INPUT_SERVER, 'REQUEST_METHOD');
     }
+
+    public function start($routes)
+    {
+
+    }
 }

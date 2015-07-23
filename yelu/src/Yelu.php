@@ -15,10 +15,12 @@ class Yelu
     {
         $this->config = $config;
 
-        $className = "{$this->config['namespaces']['controller']}Home";
+        #$className = "{$this->config['namespaces']['controller']}Home";
 
-        $home = new $className();
+        #$home = new $className();
 
         $router = new Router();
+
+        $router->start($routes->config['routes']);
     }
 }
