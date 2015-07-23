@@ -14,15 +14,15 @@ class Router
         $this->method = filter_input(INPUT_SERVER, 'REQUEST_METHOD');
     }
 
-    public function start($routes, $controllerNamespace)
+    public function start()
     {
-        foreach($routes as $route) {
-            if ($route['method'] === $this->method && $route['path'] === $this->path) {
-                $class = "{$controllerNamespace}{$route['handler']['class']}";
+        foreach(Yelu::$config->routes as $route) {
+            if ($route->method === $this->method && $route->path === $this->path) {
+                $class = Yelu::$config->namespaces->controller . $route->handler->class;
+
                 $handler = new $class();
-                $handler->$route['handler']['method']();
-# call__user_func_array(array($handler, $route['handler']['method']), [])
-# call_user_func(array($handler, $route['handler']['method']), []);
+                $method = $route->handler->method;
+                $handler->$method();
             } else {
                 echo "La ruta $this->method $this->path NO exitste!";
             }

@@ -11,6 +11,6 @@ class BaseController
 
     public function render($view)
     {
-        
+            require_once Yelu::$config->viewsDir . $view;
     }
 }

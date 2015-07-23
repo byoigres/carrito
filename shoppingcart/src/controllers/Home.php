@@ -13,6 +13,6 @@ class Home extends BaseController
 
     public function homePage()
     {
-        echo __METHOD__;
+        $this->render("home");
     }
 }

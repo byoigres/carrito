@@ -4,7 +4,7 @@ namespace Coppel\Yelu;
 
 class Yelu
 {
-    private $config;
+    public static $config;
 
     public function __construct()
     {
@@ -13,14 +13,9 @@ class Yelu
 
     public function init($config)
     {
-        $this->config = $config;
-
-        #$className = "{$this->config['namespaces']['controller']}Home";
-
-        #$home = new $className();
+        self::$config = json_decode(json_encode($config), false);
 
         $router = new Router();
-
-        $router->start($this->config['routes'], $this->config['namespaces']['controller']);
+        $router->start();
     }
 }
