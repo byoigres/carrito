@@ -16,6 +16,12 @@ class Router
 
     public function start($routes)
     {
-
+        foreach($routes as $route) {
+            if ($route['method'] === $this->method && $route['path'] === $this->path) {
+                echo "La ruta $this->method $this->path existe!";
+            } else {
+                echo "La ruta $this->method $this->path NO exitste!";
+            }
+        }
     }
 }
