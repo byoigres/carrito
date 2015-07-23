@@ -18,5 +18,7 @@ class Yelu
         $className = "{$this->config['namespaces']['controller']}Home";
 
         $home = new $className();
+
+        $router = new Router();
     }
 }
