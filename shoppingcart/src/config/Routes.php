@@ -2,6 +2,10 @@
 return [
     [
         "method" => "GET",
-        "path" => "/"
+        "path" => "/",
+        "handler" => [
+            "class" => "Home",
+            "method" => "homePage"
+        ]
     ]
 ];

@@ -8,4 +8,9 @@ class Home
     {
         echo __METHOD__;
     }
+
+    public function homePage()
+    {
+        echo __METHOD__;
+    }
 }
