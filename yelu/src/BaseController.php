@@ -8,4 +8,9 @@ class BaseController
     {
         echo __METHOD__;
     }
+
+    public function render($view)
+    {
+        
+    }
 }
