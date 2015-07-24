@@ -1,5 +1,6 @@
 <?php
 
 return [
-    "controller" => "Coppel\\Controllers\\"
+    "controller" => "Coppel\\Controllers\\",
+    "model" => "Coppel\\Models\\"
 ];

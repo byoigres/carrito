@@ -11,7 +11,8 @@
     "autoload": {
         "psr-4": {
             "Coppel\\Yelu\\": "../yelu/src/",
-            "Coppel\\Controllers\\": "src/controllers/"
+            "Coppel\\Controllers\\": "src/controllers/",
+            "Coppel\\Models\\": "src/models/"
         }
     }
 }

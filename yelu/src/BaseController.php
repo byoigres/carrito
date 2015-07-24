@@ -17,6 +17,8 @@ class BaseController
             "content" => $content
         ];
 
+        #var_dump($context);exit(0);
+
         echo $this->internalRender(Yelu::$config->layout, $context);
     }
 
@@ -33,5 +35,12 @@ class BaseController
         ob_end_clean();
 
         return $content;
+    }
+
+    public function getModel($modelName)
+    {
+        $model = Yelu::$config->namespaces->model . $modelName;
+
+        return new $model();
     }
 }

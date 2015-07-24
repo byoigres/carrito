@@ -16,16 +16,24 @@ class Router
 
     public function start()
     {
+        $routeExists = false;
+
+
         foreach(Yelu::$config->routes as $route) {
-            if ($route->method === $this->method && $route->path === $this->path) {
+            if ($route->method === $this->method && $route->path === $this->path)
+            {
                 $class = Yelu::$config->namespaces->controller . $route->handler->class;
 
                 $handler = new $class();
                 $method = $route->handler->method;
                 $handler->$method();
-            } else {
-                echo "La ruta $this->method $this->path NO exitste!";
+                $routeExists = true;
+                break;
             }
+        }
+
+        if (!$routeExists) {
+               echo "La ruta $this->method $this->path NO exitste!";
         }
     }
 }
